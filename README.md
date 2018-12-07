@@ -21,4 +21,11 @@ npm start
 
 ```
 
+## create executable
 
+```
+
+npm install electron-packager -g
+electron-packager ./
+
+```

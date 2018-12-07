@@ -5,6 +5,7 @@
   "main": "main.js",
   "author": "dimtabu",
   "license": "MIT",
+  "productName": "ElectronMnTodo",
   "scripts": {
     "start": "electron .",
     "build": "webpack --config webpack.config.js"
@@ -12,6 +13,7 @@
   "devDependencies": {
     "css-loader": "^2.0.0",
     "electron": "^3.0.10",
+    "electron-packager": "^13.0.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.5.0",
