@@ -1,0 +1,73 @@
+@import '../bundle.less';
+
+
+.hover(){
+	&:Hover{
+		background-color:rgba(0,0,0,.1);
+		cursor: pointer;
+	}
+}
+
+.todo-item {
+	box-sizing: border-box;
+
+	display: flex;
+	flex-flow: row;
+
+	user-select: none;
+
+	.todo-check, .todo-remove, .sortable-anchor {
+		.hover();
+		flex-grow:0;
+		flex-shrink:0;
+		width:@gutter2;
+		text-align:center;
+	}
+	.sortable-anchor:Hover {
+		cursor: move;
+	}
+	.todo-text {
+		flex-grow:1;
+	}
+
+
+	i {
+		font-style: normal;
+	}
+
+	> * {
+		padding: @gutter/2;
+		font-size:20px;
+	}
+
+	&.checked {
+
+		color: #777;
+
+		.todo-check > i {
+			&:before{
+				content:'\2611';
+			}
+		}
+
+		.todo-text {
+			text-decoration: line-through;
+			font-style: italic;
+			
+		}
+
+	}
+	.todo-check > i {
+		&:before{
+			content:'\2610';
+		}
+	}
+
+
+
+	& + .todo-item {
+		border-top:solid 1px rgba(0,0,0,.1);
+	}
+
+
+}
